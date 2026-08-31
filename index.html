@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ninjago Minifigure Valuelist</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <h1 class="site-title">
+        <span class="mark">⛩</span>
+        <input id="siteTitleInput" value="Ninjago Minifigure Valuelist" size="28" />
+      </h1>
+      <div class="masthead-meta">
+        <div>Rarity, value &amp; demand, tracked by set era</div>
+      </div>
+    </div>
+    <p class="site-sub">Click any card to edit it. Use the tabs to browse by era — add, rename, or remove tabs anytime.</p>
+  </header>
+
+  <nav class="tab-row" id="tabRow"></nav>
+
+  <div class="toolbar">
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8590ac" stroke-width="2">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search this tab..." />
+    </div>
+
+    <select id="sortSelect">
+      <option value="value-desc">Value: High to Low</option>
+      <option value="value-asc">Value: Low to High</option>
+      <option value="name-asc">Name: A to Z</option>
+      <option value="name-desc">Name: Z to A</option>
+      <option value="rarity-desc">Rarity: High to Low</option>
+      <option value="rarity-asc">Rarity: Low to High</option>
+      <option value="demand-desc">Demand: High to Low</option>
+      <option value="demand-asc">Demand: Low to High</option>
+    </select>
+
+    <select id="rarityFilter">
+      <option value="all">All rarities</option>
+      <option value="Common">Common</option>
+      <option value="Rare">Rare</option>
+      <option value="Epic">Epic</option>
+      <option value="Legendary">Legendary</option>
+      <option value="Mythic">Mythic</option>
+    </select>
+
+    <select id="demandFilter">
+      <option value="all">All demand</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+      <option value="Very High">Very High</option>
+    </select>
+
+    <div class="toolbar-right">
+      <button class="btn" id="importBtn">Import</button>
+      <button class="btn" id="exportBtn">Export</button>
+      <button class="btn btn-primary" id="addFigureBtn">+ Figure</button>
+    </div>
+  </div>
+
+  <main class="grid-wrap">
+    <div class="stat-strip" id="statStrip"></div>
+    <div class="card-grid" id="cardGrid"></div>
+  </main>
+
+  <footer class="site-footer">
+    Built as a static site — edit <code>data.js</code> directly, or use Export after editing in-browser.
+  </footer>
+
+  <div id="modalRoot"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
