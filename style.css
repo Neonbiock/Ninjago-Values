@@ -419,7 +419,7 @@ select:hover, .btn:hover { border-color: var(--teal); color: var(--teal); }
   position: relative;
   flex-shrink: 0;
   border-radius: 9px;
-  overflow: hidden;
+  padding: 4px;
   border: 1px solid;
   background: var(--bg-deep);
 }
@@ -429,6 +429,7 @@ select:hover, .btn:hover { border-color: var(--teal); color: var(--teal); }
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 6px;
 }
 
 .empty-state {
