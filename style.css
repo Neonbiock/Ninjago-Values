@@ -386,12 +386,18 @@ select:hover, .btn:hover { border-color: var(--teal); color: var(--teal); }
   min-height: 1.1em;
 }
 
+.card-icon-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
 .card-icon-img {
   border-radius: 9px;
   object-fit: cover;
   border: 1px solid var(--rarity-color);
   flex-shrink: 0;
   background: var(--bg-deep);
+  display: block;
 }
 
 .empty-state {
