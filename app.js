@@ -70,17 +70,13 @@ function figureIcon(fig, size) {
   const tag = escapeHtml(fig.tag || fig.name.slice(0, 3).toUpperCase());
   const color = rarityColor(fig.rarity);
 
-  // Both the image and its fallback are rendered together. If the image
-  // fails to load, onerror hides it and reveals the fallback icon next
-  // to it — kept simple (no nested quotes) so it can't break the markup.
   return `
-    <div class="card-icon-wrap" style="width:${size}px;height:${size}px;">
-      <img class="card-icon-img" src="${escapeHtml(fig.image)}" alt="${escapeHtml(fig.name)}" style="width:${size}px;height:${size}px;border-color:${color}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      <div class="card-icon" style="width:${size}px;height:${size}px;border-color:${color};color:${color};display:none;">${tag}</div>
+    <div class="card-icon-wrap" style="width:${size}px;height:${size}px;border-color:${color}">
+      <img class="card-icon-img" src="${escapeHtml(fig.image)}" alt="${escapeHtml(fig.name)}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="card-icon" style="border-color:${color};color:${color};display:none;">${tag}</div>
     </div>
   `;
 }
-
 function figureFallbackIcon(fig, size) {
   const tag = escapeHtml(fig.tag || fig.name.slice(0, 3).toUpperCase());
   const color = rarityColor(fig.rarity);
