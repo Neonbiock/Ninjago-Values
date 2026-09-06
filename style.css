@@ -13,11 +13,12 @@
   --teal: #45d0c0;
   --red: #e0566b;
 
-  --r-common: #7d879f;
-  --r-rare: #4fb8d6;
-  --r-epic: #a482e8;
-  --r-legendary: #c9a04a;
-  --r-mythic: #e0566b;
+  --r-common: #4fd673;
+  --r-rare: #4f95d6;
+  --r-epic: #d6d624;
+  --r-legendary: #9116d9;
+  --r-mythic: #d93616;
+  --r-celestial: linear-gradient(to right, #cf7ac7, #7ac6cf);
 }
 
 * { box-sizing: border-box; }
