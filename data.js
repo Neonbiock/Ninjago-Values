@@ -55,7 +55,7 @@ const TABS = [
     id: "pilot",
     label: "Pilot Episodes",
     figures: [
-      { name: "Kai (Pilot)", rarity: "Legendary", value: 240, demand: "High", trend: "up", tag: "KAI", notes: "First-ever Kai print", image: "" },
+      { name: "Kai (Pilot)", rarity: "Legendary", value: 240, demand: "High", trend: "up", tag: "KAI", notes: "First-ever Kai print", image: "images/kai-pilot.jpg" },
       { name: "Jay (Pilot)", rarity: "Epic", value: 150, demand: "Medium", trend: "stable", tag: "JAY", notes: "", image: "" },
       { name: "Cole (Pilot)", rarity: "Epic", value: 150, demand: "Medium", trend: "stable", tag: "COL", notes: "", image: "" },
       { name: "Zane (Pilot)", rarity: "Epic", value: 160, demand: "High", trend: "up", tag: "ZAN", notes: "", image: "" },
