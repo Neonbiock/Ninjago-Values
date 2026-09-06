@@ -24,7 +24,8 @@ const TREND_SYMBOL = { up: "▲", down: "▼", stable: "—" };
 /* ---------- Elements ---------- */
 
 const el = {
-  navRow: document.getElementById("navRow"),
+  pinnedNav: document.getElementById("pinnedNav"),
+  seasonNav: document.getElementById("seasonNav"),
   toolbar: document.getElementById("toolbar"),
   content: document.getElementById("content"),
   search: document.getElementById("searchInput"),
