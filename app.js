@@ -16,9 +16,9 @@ const state = {
   },
 };
 
-const RARITY_ORDER = ["Common", "Rare", "Epic", "Legendary", "Mythic"];
-const DEMAND_ORDER = ["Low", "Medium", "High", "Very High"];
-const DEMAND_PCT = { "Low": 25, "Medium": 50, "High": 75, "Very High": 100 };
+const RARITY_ORDER = ["Common", "Rare", "Epic", "Legendary", "Mythic", "Celestial"];
+const DEMAND_ORDER = ["Very Low", "Low", "Average", "High", "Very High"];
+const DEMAND_PCT = { "Very Low": 20, "Low": 40, "Average": 60, "High": 80, "Very High": 100 };
 const TREND_SYMBOL = { up: "▲", down: "▼", stable: "—" };
 
 /* ---------- Elements ---------- */
@@ -55,6 +55,7 @@ function rarityColor(rarity) {
     Epic: "var(--r-epic)",
     Legendary: "var(--r-legendary)",
     Mythic: "var(--r-mythic)",
+    Celestial: "var(--r-celestial)",
   }[rarity] || "var(--r-common)";
 }
 
