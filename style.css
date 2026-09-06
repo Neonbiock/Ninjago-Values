@@ -101,6 +101,24 @@ a { color: inherit; }
   border-bottom: 1px solid var(--line);
   overflow-x: auto;
   scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--bg-deep);
+}
+
+.tab-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tab-row::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+.tab-row::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  border-radius: 4px;
+}
+
+.tab-row::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-soft);
 }
 
 .tab {
