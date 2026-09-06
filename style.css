@@ -91,33 +91,44 @@ a { color: inherit; }
 
 /* ---------- Tabs ---------- */
 
-.tab-row {
+.tab-bar {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
   align-items: center;
-  gap: 6px;
   border-bottom: 1px solid var(--line);
+}
+
+.tab-pinned {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.tab-scroll {
+  display: flex;
+  gap: 6px;
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--gold) var(--bg-deep);
+  flex: 1;
+  min-width: 0;
 }
 
-.tab-row::-webkit-scrollbar {
+.tab-scroll::-webkit-scrollbar {
   height: 6px;
 }
 
-.tab-row::-webkit-scrollbar-track {
+.tab-scroll::-webkit-scrollbar-track {
   background: var(--bg-deep);
 }
 
-.tab-row::-webkit-scrollbar-thumb {
+.tab-scroll::-webkit-scrollbar-thumb {
   background: linear-gradient(90deg, var(--teal), var(--gold));
   border-radius: 4px;
 }
 
-.tab-row::-webkit-scrollbar-thumb:hover {
+.tab-scroll::-webkit-scrollbar-thumb:hover {
   background: var(--gold-soft);
 }
 
