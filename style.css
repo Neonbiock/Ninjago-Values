@@ -420,7 +420,6 @@ select:hover, .btn:hover { border-color: var(--teal); color: var(--teal); }
   flex-shrink: 0;
   border-radius: 9px;
   padding: 4px;
-  border: 1px solid;
   background: var(--bg-deep);
 }
 
