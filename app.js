@@ -64,7 +64,7 @@ function escapeHtml(str) {
 }
 
 function figureIcon(fig, size) {
-  size = size || 44;
+  size = size || 56;
   if (!fig.image) return figureFallbackIcon(fig, size);
 
   const tag = escapeHtml(fig.tag || fig.name.slice(0, 3).toUpperCase());
