@@ -70,11 +70,12 @@ function figureIcon(fig, size) {
 
   const tag = escapeHtml(fig.tag || fig.name.slice(0, 3).toUpperCase());
   const color = rarityColor(fig.rarity);
+  const height = Math.round(size * 1.4); // taller than wide
 
   return `
-    <div class="card-icon-wrap" style="width:${size}px;height:${size}px;border-color:${color}">
+    <div class="card-icon-wrap" style="width:${size}px;height:${height}px;">
       <img class="card-icon-img" src="${escapeHtml(fig.image)}" alt="${escapeHtml(fig.name)}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      <div class="card-icon" style="border-color:${color};color:${color};display:none;">${tag}</div>
+      <div class="card-icon" style="color:${color};display:none;">${tag}</div>
     </div>
   `;
 }
