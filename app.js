@@ -87,7 +87,8 @@ function figureFallbackIcon(fig, size) {
 /* ---------- Nav ---------- */
 
 function renderNav() {
-  el.navRow.innerHTML = "";
+  el.pinnedNav.innerHTML = "";
+  el.seasonNav.innerHTML = "";
 
   const pinned = [
     { id: "home", label: "Home" },
@@ -102,12 +103,8 @@ function renderNav() {
       state.view = p.id;
       renderAll();
     });
-    el.navRow.appendChild(btn);
+    el.pinnedNav.appendChild(btn);
   });
-
-  const divider = document.createElement("div");
-  divider.className = "tab-divider";
-  el.navRow.appendChild(divider);
 
   state.tabs.forEach((tab) => {
     const btn = document.createElement("button");
@@ -117,7 +114,7 @@ function renderNav() {
       state.view = tab.id;
       renderAll();
     });
-    el.navRow.appendChild(btn);
+    el.seasonNav.appendChild(btn);
   });
 }
 
