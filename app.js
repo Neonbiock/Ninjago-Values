@@ -239,7 +239,7 @@ function renderTabView() {
             </div>
           </div>
           <div class="card-value-row">
-            <div class="card-value">${Number(fig.value).toLocaleString()}</div>
+            <div class="card-value">${escapeHtml(fig.valueLabel || "")}</div>
             <div class="card-trend ${trendClass}">${TREND_SYMBOL[fig.trend] || "—"}</div>
           </div>
           <div class="card-demand">
