@@ -365,7 +365,7 @@ function calcSideHtml(side, title, total) {
       <div class="calc-item">
         ${figureIcon(f, 30)}
         <div class="calc-item-name">${escapeHtml(f.name)}</div>
-        <div class="calc-item-value">${Number(f.value).toLocaleString()}</div>
+        <div class="calc-item-value">${escapeHtml(f.valueLabel || "")}</div>
         <button class="calc-remove" data-side="${side}" data-idx="${i}" title="Remove">×</button>
       </div>
     `
